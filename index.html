@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AltaiNature</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Header -->
+    <section class="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <div class="logo logo-header">
+                    <img src="https://cdn.glitch.global/6fb3de5b-7339-4091-bd20-a7f17c3e70fa/logo.png?v=1684151190879"
+                        alt="logo" width="150px" height="150px">
+                </div>
+                <h1>Reasons every traveler must visit Altai Republic</h1>
+                <form action="https://formspree.io/f/mnqyowgn" method="POST">
+                    <input type="hidden" name="_language" value="en" />
+                    <div class="input-header">
+                        <label class="label-header">
+                            <input type="email" class="text-input" name="email" placeholder="Email" required="">
+                        </label>
+                        <label class="label-header">
+                            <input type="tel" class="text-input" name="phone" placeholder="Phone" required="">
+                        </label>
+                        <button class="btn-header" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="window">
+                <a class="open_modal" href="#open">Сalculate tour</a>
+            </div>
+
+            <!-- Modal window -->
+
+            <div id="modal" class="modal bounceIn">
+                <div id="close_modal">+</div>
+                <div class="container-window">
+                    <div class="container-form">
+                        <p class="par-title">Let's find the price of your tour</p>
+                        <form>
+                            <p class="parag"> Choose your room type</p>
+                            <select id="room">
+                                <option value="200" selected>Studio Room</option>
+                                <option value="400">Suite with Balcony</option>
+                                <option value="600">Suite with Terrace</option>
+                                <option value="600">Family Room</option>
+                                <option value="1000">Villa</option>
+                            </select>
+                            <br>
+                            <p class="parag">Food & drinks</p>
+                            <select id="food">
+                                <option value="30">Only Breakfast</option>
+                                <option value="40">Breakfast & Dinner</option>
+                                <option value="50" selected>All inclusive</option>
+                            </select>
+                            <br>
+                            <p class="parag bottom">How many persons?</p>
+                            <p class="parag">Adults
+                                <span>
+                                    <input class="modal-text" type="number" id="adult" min="0"
+                                        placeholder="How many adults">
+                                </span>
+                            </p>
+                            <br>
+                            <p class="parag">*Children half price
+                                <span>
+                                    <input class="modal-text" type="number" id="children" min="0"
+                                        placeholder="How many children">
+                                </span>
+                            </p>
+                            <br>
+                            <p class="parag">How many days
+                                <select id="days">
+                                    <option value="1">1 day</option>
+                                    <option value="2">2 days</option>
+                                    <option value="3">3 days</option>
+                                    <option value="4">4 days</option>
+                                    <option value="5">5 days</option>
+                                    <option value="6" selected>6 days</option>
+                                </select>
+                            </p>
+                            <br>
+                            <div>
+                                <input type="checkbox" id="check" value="150">
+                                <label for="check" class="label">Transfer from airport</label>
+                            </div>
+                            <br>
+                            <button class="btn-calc">Calculate</button>
+                        </form>
+                        <div id="showTotalAmountToPay">
+                            <!-- 1 block -->
+                            <div id="adultPrice">
+                                <p>Total price
+                                    <span>$</span>
+                                    <span id="dividedAdult"></span>
+                                    <span>per adults</span>
+                                </p>
+                            </div>
+                            <!-- 2 block -->
+                            <div id="childrenPrice">
+                                <p>Total price
+                                    <span>$</span>
+                                    <span id="dividedChildren"></span>
+                                    <span>per children</span>
+                                </p>
+                            </div>
+                            <!-- 3 block -->
+                            <div id="totalAmount">
+                                <p>Total price
+                                    <span>$</span>
+                                    <span id="familyTotal"></span>
+                                    <span>per family</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reset_btn">
+                            <button class="reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--About Altai -->
+    <div class="wrapper">
+        <section id="about">
+            <div class="AboutAltai">
+                <div class="headingAltaiAll">
+                    <h3 class="headingAltai">The Altai Mountains</h3>
+                    <p class="AboutAltai-text left">Tourism to Altai is extraordinarily diverse. This unique land
+                        attracts tourists from all over the world!
+                        Altai, a vast mountainous territory, lies to the south of Siberia. Altai also has endless
+                        steppes, impenetrable taiga, numerous lakes, rivers and waterfalls. This diversity favours fauna
+                        species variety: brown bear, elk, wolf, golden eagle and others. </p>
+                </div>
+                <img class="Altai-img"
+                    src="https://cdn.glitch.global/6fb3de5b-7339-4091-bd20-a7f17c3e70fa/Altai.jpg?v=1684151045756"
+                    alt="Altai">
+            </div>
+            <div class="AboutAltai hidden">
+                <img class="Altai-img"
+                    src="https://cdn.glitch.global/6fb3de5b-7339-4091-bd20-a7f17c3e70fa/Altai2.jpg?v=1684151056987"
+                    alt="Altai">
+                <p class="AboutAltai-text right">This region is great for active tourism. Plenty of hiking, bicycling
+                    and horse riding trails. Rafting down the rivers such as Katun, Chuya and Chulyshman will give you
+                    unforgettable memories. AltaiNature is happy to offer tours to Altai, price includes excursions,
+                    accommodation, food, meetings with local residents and other adventures. </p>
+            </div>
+        </section>
+    </div>
+    <!-- Slides -->
+    <section id="Program">
+        <h3 class="center">Tour program</h3>
+        <div class="containerProgram">
+            <div class="item one selected ">
+                <h4 class="place">Chemal</h4>
+                <p class="par hidden">Group gathering at the airport of Gorno-Altaisk city We will drive you to the
+                    hotel, located on the Katun river bank near Ust-Sema village.
+                    After check-in and a short rest, you'll have the first meeting with Altai.</p>
+                <p class="price">Day 1.</p>
+            </div>
+            <div class="item two">
+                <h4 class="place">Flora and fauna of Altai</h4>
+                <p class="par hidden">You'll have an excursion to maral (The red deer) and horse farm.
+                    Between these points you'll visit Tavdinsky caves, there you'll have a walking through a cave to the
+                    viewpoint on the top of the mountain.</p>
+                <p class="price">Day 2.</p>
+            </div>
+            <div class="item three">
+                <h4 class="place">Katu Yaruk pass</h4>
+                <p class="par hidden">Katu Yaruk is the most picturesque pass (available for reaching by car) in Altai.
+                    From the top, you'll see the canyon of the Chulyshman river and the Karasuu waterfall.
+                    On our way back, we will make a stop near the Pazyryk burials to explore the Pazyruk culture.</p>
+                <p class="price">Day 3.</p>
+            </div>
+            <div class="item four">
+                <h4 class="place">Chulyshman valley</h4>
+                <p class="par hidden">One of the most beautiful places in this tour. We can't describe the beauty of
+                    this place. It's beyond words.
+                    The Stone Mushrooms - an amazing natural phenomenon. In a narrow canyon, there is a group of several
+                    dozen 5-7 meters tall "mushrooms".
+                    Tonight you'll stay in a tiny wooden tiny house, located in Chulyshman valley.</p>
+                <p class="price">Day 4.</p>
+            </div>
+            <div class="item five">
+                <h4 class="place">Chuya Highway - Aktash</h4>
+                <p class="par hidden">We will go through Seminsky mountain pass that is 1717 m high. The second one is
+                    not as high, however, its steep hillside is impressive.
+                    Chuya and Katun’s confluence. Siberia. The river colours are different and before they get mixed,
+                    you can relish picturesque paints of turquoise whirls.</p>
+                <p class="price">Day 5.</p>
+            </div>
+            <div class="item six">
+                <h4 class="place">Multicolored nature</h4>
+                <p class="par hidden">Multicolored nature
+                    There are 2 sights of the day have unusual colors:
+                    The Geyser lake. Surface of the lake is decorated with colourful moving circles.
+                    The unique multicolor Kyzyl Chin mountains, which are rightly called Martian because of red, yellow
+                    and green loam, covering its sides.</p>
+                <p class="price">Day 6.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Icons -->
+    <section id="Icons">
+        <div class="wrapper">
+            <h4 class="center">We should let's reveal the secrets of the mountains to everyone:</h4>
+            <div class="iconsAll">
+                <div class="icons">
+                    <img class="icon"
+                        src="https://cdn.glitch.global/6fb3de5b-7339-4091-bd20-a7f17c3e70fa/photo.png?v=1684151140293"
+                        alt="photo">
+                    <p class="icon-text">for those who want to take pictures like National Geographic</p>
+                </div>
+                <div class="icons">
+                    <img class="icon"
+                        src="https://cdn.glitch.global/6fb3de5b-7339-4091-bd20-a7f17c3e70fa/hiking.png?v=1684151134991"
+                        alt="hiking">
+                    <p class="icon-text">adventure seekers from 7 to 68 years</p>
+                </div>
+                <div class="icons">
+                    <img class="icon"
+                        src="https://cdn.glitch.global/6fb3de5b-7339-4091-bd20-a7f17c3e70fa/mountains.png?v=1684151143446"
+                        alt="mountains">
+                    <p class="icon-text">for those who want to see the realhighlights of Gorny Altai</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Timer -->
+    <section id="timer">
+        <div class="wrapper">
+            <div class="heading">
+                <h4 class="center">The first summer tour starts in:</h4>
+            </div>
+            <div class="containerTimer">
+                <div class="startTimer">
+                    <div class="block">
+                        <h4 class="days time"></h4>
+                        <h3 class="textTimer">DAYS</h3>
+                    </div>
+                </div>
+                <div class="startTimer">
+                    <div class="block">
+                        <h4 class="hours time"></h4>
+                        <h3 class="textTimer">HOURS</h3>
+                    </div>
+                </div>
+                <div class="startTimer">
+                    <div class="block">
+                        <h4 class="minutes time"></h4>
+                        <h3 class="textTimer">MINUTES</h3>
+                    </div>
+                </div>
+                <div class="startTimer">
+                    <div class="block">
+                        <h4 class="seconds time"></h4>
+                        <h3 class="textTimer">SECONDS</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="https://cdn.glitch.global/6fb3de5b-7339-4091-bd20-a7f17c3e70fa/logo.png?v=1684151190879"
+                    alt="logo" width="150px" height="150px">
+            </div>
+            <div class="heading">
+                <h3 class="center">Send us a message!</h3>
+            </div>
+            <div class="inputAll">
+                <div class="inputShort">
+                    <form action="https://formspree.io/f/mnqyowgn" method="POST">
+                        <input type="hidden" name="_language" value="en" />
+                        <div class="heading">
+                            <label class="label-footer">
+                                <input type="text" class="text-input" name="name" placeholder="Name" required="">
+                            </label>
+                        </div>
+                        <div class="heading">
+                            <label class="label-footer">
+                                <input type="email" class="text-input" name="email" placeholder="Email" required="">
+                            </label>
+                        </div>
+                        <div class="heading">
+                            <label class="label-footer">
+                                <input type="tel" class="text-input" name="phone" placeholder="Phone" required="">
+                            </label>
+                        </div>
+                </div>
+                <div class="inputLong">
+                    <div class="heading">
+                        <label class="label-footer">
+                            <textarea class="text-input message" name="message" placeholder="Type your message..."
+                                required minlength="1" maxlength="150" size="10"></textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="heading">
+                <button class="btn-footer" type="submit">Send</button>
+            </div>
+            </form>
+        </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
